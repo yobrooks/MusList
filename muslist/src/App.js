@@ -1,6 +1,17 @@
 import React from 'react';
+import ListEntry from "./components/ListEntry"
 
-function App() {
+function App(props) {
+  const entryList = props.entries.map(item => (
+    <ListEntry 
+      id = {item.id}
+      key={item.id} //special prop used solely by React; a unique value (maybe won't need the id attribute); might change to just a number
+      name={item.name}
+      type={item.type}
+      genre={item.genre}
+      note={item.note}
+      completed={item.completed}
+    />));
   return (
     <div className="App">
       <header className="App-header">
@@ -10,100 +21,19 @@ function App() {
       <div className="artist-section">
         <h3>Artists</h3>
         <ul>
-          <li>
-            <div className = "entry-info">
-              <input className="artist-entry" type="checkbox"/>
-              <label className="entry-label" htmlFor="entry-0">
-                Michael Jackson
-              </label>
-              <div className = "entry-genre">Genre</div>
-              <textarea className = "entry-notes">Has X number of albums</textarea>
-            </div>   
-            <div className = "buttons-group">
-              <button type="button" className="btn">Edit</button>
-              <button type="button" className="btn">Delete</button>
-            </div>
-          </li>
-          <li>
-            <div className = "entry-info">
-              <input className="artist-entry" type="checkbox"/>
-              <label className="entry-label" htmlFor="entry-0">
-                Fleetwood Mac
-              </label>
-              <div className = "entry-genre">Genre</div>
-              <textarea className = "entry-notes">Has X number of albums</textarea>
-            </div>   
-            <div className = "buttons-group">
-              <button type="button" className="btn">Edit</button>
-              <button type="button" className="btn">Delete</button>
-            </div>
-          </li>
+          {entryList[0]}
         </ul>
       </div>
       <div className="album-section">
         <h3>Albums</h3>
         <ul>
-          <li>
-            <div className = "entry-info">
-              <input className="album-entry" type="checkbox"/>
-              <label className="entry-label" htmlFor="entry-0">
-                Off The Wall
-              </label>
-              <div className = "entry-genre">Genre</div>
-              <textarea className = "entry-notes">Has X number of albums</textarea>
-            </div>   
-            <div className = "buttons-group">
-              <button type="button" className="btn">Edit</button>
-              <button type="button" className="btn">Delete</button>
-            </div>
-          </li>
-          <li>
-            <div className = "entry-info">
-              <input className="album-entry" type="checkbox"/>
-              <label className="entry-label" htmlFor="entry-0">
-                Lemonade
-              </label>
-              <div className = "entry-genre">Genre</div>
-              <textarea className = "entry-notes">Has X number of albums</textarea>
-            </div>   
-            <div className = "buttons-group">
-              <button type="button" className="btn">Edit</button>
-              <button type="button" className="btn">Delete</button>
-            </div>
-          </li>
+          {entryList[1]}
         </ul>
       </div>
       <div className="song-section">
         <h3>Songs</h3>
         <ul>
-          <li>
-            <div className = "entry-info">
-              <input className="song-entry" type="checkbox"/>
-              <label className="entry-label" htmlFor="entry-0">
-                This Time Around
-              </label>
-              <div className = "entry-genre">Genre</div>
-              <textarea className = "entry-notes">Has X number of albums</textarea>
-            </div>   
-            <div className = "buttons-group">
-              <button type="button" className="btn">Edit</button>
-              <button type="button" className="btn">Delete</button>
-            </div>
-          </li>
-          <li>
-            <div className = "entry-info">
-              <input className="song-entry" type="checkbox"/>
-              <label className="entry-label" htmlFor="entry-0">
-                Remember Me
-              </label>
-              <div className = "entry-genre">Genre</div>
-              <textarea className = "entry-notes">Has X number of albums</textarea>
-            </div>   
-            <div className = "buttons-group">
-              <button type="button" className="btn">Edit</button>
-              <button type="button" className="btn">Delete</button>
-            </div>
-          </li>
+          {entryList[2]}
         </ul>
       </div>
       <form>
