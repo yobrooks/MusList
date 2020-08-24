@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function ListEntry(props){
+import "../styles/ListEntry.css"
+function ListEntry(props){
     return (
         <li className="list-entry" id={props.id}>
         <div className = "entry-info">
@@ -18,3 +19,5 @@ export default function ListEntry(props){
       </li>
     );
 }
+
+export default ListEntry;
