@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// styling imports from antd
+
 //my own components
 import ListEntry from "./components/ListEntry"
 import NewEntryForm from "./components/NewEntryForm"
@@ -32,6 +32,11 @@ function App(props) {
     return entryItem.type === "song";
   }));
 
+  function deleteTask(id){
+    const restOfEntries = entries.filter(entry => id !== entry.id);
+    setEntries(restOfEntries);
+  }
+
   // entries stores all the entries the user has entered and passed as a prop from index.js
   //loop thru each entry and make them a ListEntry component
   function makeLists(inputArray){
@@ -44,6 +49,7 @@ function App(props) {
         genre={item.genre}
         note={item.note}
         completed={item.completed}
+        deleteTask={deleteTask}
       />));
   }
 
