@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {nanoid} from "nanoid";
 
 //my own components
 import ListEntry from "./components/ListEntry"
@@ -10,7 +11,7 @@ function App(props) {
 
   function addEntry(entry){
     const newEntry = {
-      id:"id-3",
+      id:"id-" + nanoid(),
       name:entry.name,
       type:entry.type,
       genre:entry.genre,
@@ -18,7 +19,7 @@ function App(props) {
       completed:false
     };
 
-    console.log(newEntry.type);
+    console.log(newEntry.id);
     setEntries([...entries, newEntry]);
   }
 

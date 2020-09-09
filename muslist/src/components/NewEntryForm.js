@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/NewEntryForm.css"
 
 function NewEntryForm(props){
-
    //state --> current entry the user is typing
    const [currentEntry, setCurrentEntry] = useState({name:"", type:"", genre:"", note:""});
 
