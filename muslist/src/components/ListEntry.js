@@ -2,6 +2,7 @@ import React from "react";
 
 import "../styles/ListEntry.css"
 function ListEntry(props){
+
     return (
         <li className="list-entry" id={props.id}>
         <div className = "entry-info">

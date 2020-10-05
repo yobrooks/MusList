@@ -33,9 +33,21 @@ function App(props) {
     return entryItem.type === "song";
   }));
 
-  function deleteTask(id){
+  function deleteEntry(id){
     const restOfEntries = entries.filter(entry => id !== entry.id);
     setEntries(restOfEntries);
+  }
+
+  function editEntry(id, newName, newNote, newGenre){
+    const editedEntryList = entries.map(entry => {
+      if(id === entry.id){
+        return {...entry, name:newName, genre: newGenre, note: newNote}
+      }
+
+      return entry;
+    });
+
+    setEntries(editedEntryList);
   }
 
   // entries stores all the entries the user has entered and passed as a prop from index.js
@@ -50,7 +62,8 @@ function App(props) {
         genre={item.genre}
         note={item.note}
         completed={item.completed}
-        deleteTask={deleteTask}
+        deleteEntry={deleteEntry}
+        editEntry={editEntry}
       />));
   }
 
