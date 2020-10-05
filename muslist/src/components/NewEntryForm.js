@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../styles/NewEntryForm.css"
+//import "../styles/NewEntryForm.css"
 
 function NewEntryForm(props){
    //state --> current entry the user is typing
-   const [currentEntry, setCurrentEntry] = useState({name:"", type:"", genre:"", note:""});
+   /*const [currentEntry, setCurrentEntry] = useState({name:"", type:"", genre:"", note:""});
 
   function handleSubmit(e){
     e.preventDefault();
@@ -14,10 +14,10 @@ function NewEntryForm(props){
 
   function handleInputChange(e){
     setCurrentEntry({...currentEntry, [e.target.name]:e.target.value});
-  }
+  }*/
 
     return(
-        <form onSubmit={handleSubmit}>
+        {/*<form onSubmit={handleSubmit}>
         <h2>Add More Music!</h2>
         <label htmlFor="new-entry-name">Entry Name: </label>
         <input
@@ -62,7 +62,7 @@ function NewEntryForm(props){
         </textarea>
         <br></br>
         <button type="submit" className="btn">Add</button>
-      </form>
+    </form>*/}
     );
 }
 

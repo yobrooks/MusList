@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+//import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -14,7 +14,8 @@ const entriesData = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <App entries={entriesData}/>
+    {/*<App entries={entriesData}/>*/}
+  <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

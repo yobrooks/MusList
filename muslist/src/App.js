@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import {nanoid} from "nanoid";
 
 //my own components
-import ListEntry from "./components/ListEntry"
-import NewEntryForm from "./components/NewEntryForm"
+//import ListEntry from "./components/ListEntry"
+//import NewEntryForm from "./components/NewEntryForm"
 
 
 function App(props) {
-  const [entries, setEntries] = useState(props.entries);
+  /*const [entries, setEntries] = useState(props.entries);
 
   function addEntry(entry){
     const newEntry = {
@@ -70,11 +70,11 @@ function App(props) {
   const artistList = makeLists(artists);
   const albumList = makeLists(albums);
   const songList = makeLists(songs);
-  
+  */
   
 
   return (
-    <div className="App">
+    {/*<div className="App">
       <header className="App-header">
         <h1>MusList</h1>
         <h2>Music User Wants To Hear</h2>
@@ -98,7 +98,7 @@ function App(props) {
         </ul>
       </div>
       <NewEntryForm addEntry={addEntry} />
-    </div>
+  </div>*/}
   );
 }
 
