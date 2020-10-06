@@ -7,6 +7,7 @@ import {nanoid} from "nanoid";
 
 
 function App(props) {
+  
   /*const [entries, setEntries] = useState(props.entries);
 
   function addEntry(entry){

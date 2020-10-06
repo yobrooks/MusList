@@ -1,3 +1,5 @@
+//this form will be for adding new entries and editing existin entries
+//depending on state the information will be filled in or it will be blank
 import React, { useState } from "react";
 //import "../styles/NewEntryForm.css"
 
