@@ -7,9 +7,9 @@ import * as serviceWorker from './serviceWorker';
 //gets passed to App.js as a prop called entries
 //App.js (before return statement) unravels the entry data with the map() function 
 //and turns each entry into a list entry component and is used in the lists
-const entriesData = [
+//const entriesData = [
   
-]
+//]
 
 ReactDOM.render(
   <React.StrictMode>
