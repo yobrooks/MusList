@@ -3,11 +3,9 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io'
 import NavMenuItems from '../navbar/NavMenuItems';
 import '../../styles/NavBar.css';
-//NOTE: NavBar will have props that sets the sidebar state
-function NavBar(){
-    //state: click will toggle between hamburger menu and x icon
-    //sidebar will be whether it's a sidebar or full menu
-    const [sidebar, setSidebar] = useState(false);
+
+function NavBar(props){
+    //active determines whether hamburger menu has been toggled on or off
     const [active, setActive] = useState(false);
 
     const handleClick = () => {
@@ -16,13 +14,18 @@ function NavBar(){
 
     return (
        <nav className="navbar-container">
-           {/*This will be either just logo or AppTitle component className = "nav-logo"*/}
-           <div className="menu-icon" onClick={handleClick}>
+           {/*This will be either just logo or AppTitle component className ="nav-logo"*/}
+           <div class="nav-logo"></div>
+           <div className={props.sidebar ? "sidebar-menu-icon" : "menu-icon"} onClick={handleClick}>
                {active ? <IoMdClose />: <GiHamburgerMenu />}
            </div>
-           <ul className={active ? "nav-menu active" : "nav-menu"}>
-              <NavMenuItems sidebar={sidebar}/>
-           </ul>
+           {/* change class name depending on whether mobile menu active */}
+               <ul className=
+                {props.sidebar && active ? "sidebar-nav-menu active" : 
+                props.sidebar && !active ? "sidebar-nav-menu" : 
+                !props.sidebar && active ? "nav-menu active" : "nav-menu"}>
+                    <NavMenuItems sidebar={props.sidebar}/>
+                </ul>
        </nav>
     );
 }

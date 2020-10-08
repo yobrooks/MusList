@@ -11,7 +11,7 @@ function App(props) {
  
   return (
     <div>
-      <NavBar />
+      <NavBar sidebar={false}/>
     </div>
     
   );

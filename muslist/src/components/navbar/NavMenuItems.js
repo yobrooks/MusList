@@ -29,22 +29,22 @@ const sideNavItems = [
     {
         title: 'Side1',
         link: '#',
-        class: 'nav-links'
+        class: 'sidebar-nav-links'
     },
     {
         title: 'Side2',
         link: '#',
-        class: 'nav-links'
+        class: 'sidebar-nav-links'
     },
     {
         title: 'Side3',
         link: '#',
-        class: 'nav-links'
+        class: 'sidebar-nav-links'
     },
     {
         title: 'Side4',
         link: '#',
-        class: 'nav-links'
+        class: 'sidebar-nav-links'
     },
 ]
 
