@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
-import NavBar from "./components/navbar/NavBar";
-import { Button } from "./components/auxComps/Button";
-import { SelectField } from "./components/forms/SelectField";
-import { InputField } from "./components/forms/InputField";
-import { TextAreaField } from "./components/forms/TextAreaField";
+import HomePage from "./components/pages/HomePage";
 
 //my own components
 //import ListEntry from "./components/ListEntry"
@@ -13,10 +9,7 @@ import { TextAreaField } from "./components/forms/TextAreaField";
 function App(props) {
   return (
     <div>
-      <InputField />
-      <SelectField />
-      <TextAreaField />
-      <Button>Sign Up</Button>
+      <HomePage />
     </div>
   );
 }
