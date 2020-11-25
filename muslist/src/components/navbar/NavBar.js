@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import NavMenuItems from "../navbar/NavMenuItems";
 import "../../styles/NavBar.css";
+import { Button } from "../auxComps/Button";
 
 function NavBar(props) {
   //active determines whether hamburger menu has been toggled on or off
@@ -36,6 +37,12 @@ function NavBar(props) {
       >
         <NavMenuItems sidebar={props.sidebar} />
       </ul>
+      <Button
+        children="Sign Up"
+        type="button"
+        buttonStyle="btn-primary"
+        buttonSize="btn-sm"
+      />
     </nav>
   );
 }

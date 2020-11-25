@@ -1,9 +1,35 @@
 :root {
-  --primary: blue;
+  --primary: white;
 }
 
 .btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  border-radius: 45px;
+  cursor: pointer;
 }
 
-.btn:hover {
+/* Button Styles */
+.btn-primary {
+  background-color: var(--primary);
+  color: black;
+}
+
+/* Button Sizes */
+
+.btn-sm {
+  width: 110px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.btn-med {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.btn-lg {
+  width: 175px;
+  height: 40px;
+  font-size: 24px;
 }
